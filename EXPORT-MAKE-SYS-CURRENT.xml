@@ -204,7 +204,7 @@
 				<attribute name="Sealed" value="false" />
 			</manifest>
 			<fileset dir="../ae3.sys.pkg.i3.email/bin" />
-			<fileset dir="../acm.base/bin" />
+			<fileset dir="../acm-base-api/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/axiom/ru.myx.acm.impl-5.0.jar"
@@ -215,7 +215,7 @@
 				<attribute name="Class-Path" value="." />
 				<attribute name="Sealed" value="false" />
 			</manifest>
-			<fileset dir="../acm.boot/bin" />
+			<fileset dir="../acm-base-sdk/bin" />
 		</jar>
 		
 		<mkdir dir="${target}/boot"/>
@@ -486,7 +486,7 @@
 			<fileset dir="../acm-skin-ctrl-temp/resources" />
 			<fileset dir="../acm-skin-ctrl-temp-ie6/resources" />
 			<fileset dir="../acm-skin-acmcms-info/resources" />
-			<fileset dir="../acm.base/resources" />
+			<fileset dir="../acm-base-api/resources" />
 			<fileset dir="../impl-standard-skinners/resources" />
 			<fileset dir="../acm-plug-webdav/resources" />
 			<fileset dir="../acm-plug-s3/resources" />
