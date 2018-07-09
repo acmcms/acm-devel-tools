@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="90mm" height="55mm" version="1.1"
+xmlns="http://www.w3.org/2000/svg">
+
+<!-- using 0.1 scale and all sizes and coordinates are multiplied by 10, somehow produces better quality -->
+<g transform="translate(0,0),scale(0.1)" text-rendering="geometricPrecision">
+	<rect x="0" y="0" width="1000%" height="1000%" style="fill:none;stroke-width:3mm;stroke:rgb(127,127,127)"/>
+	<g font-family="Courier New" font-weight="bold" font-size="3500%" fill="#777777" transform="translate(70,-100) scale(1, 3.3)">
+		<text x="000.0%" y="210%">-</text>
+		<text x="090.0%" y="210%">=</text>
+		<text x="190.0%" y="210%">M</text>
+		<text x="288.0%" y="210%">y</text>
+		<text x="370.0%" y="210%">X</text>
+		<text x="450.0%" y="210%">=</text>
+		<text x="540.0%" y="210%">-</text>
+	</g>
+	<g text-anchor="end" font-family="Verdana" font-weight="bold" font-size="750%" transform="translate(0,250) scale(1, 1.3)">
+		<text x="970%" y="0%">Alexander Kharitchev</text>
+	</g>
+	<g text-anchor="end" font-family="Verdana" font-weight="normal" font-size="600%" transform="translate(0,250)">
+		<!--<text x="970%" y="70%">Unorthodox thinker</text>-->
+		<!--<text x="970%" y="70%">Systems architect</text>-->
+		<text x="970%" y="70%">IT Solutions Expert</text>
+	</g>
+	<!-- translate(-340,0) -->
+	<g text-anchor="end" font-family="Verdana" font-weight="bold" font-size="550%" transform="translate(-340,100) scale(1.1, 1)">
+		<text x="970%" y="580%"><tspan font-weight="normal" fill="#555555">spell </tspan> mookh</text>
+		<text x="970%" y="640%"><tspan font-weight="normal" fill="#555555">icq </tspan> 220-62-41</text>
+		<text x="970%" y="700%"><tspan font-weight="normal" fill="#555555">skpe </tspan> icq2206241</text>
+		<text x="970%" y="760%"><tspan font-weight="normal" fill="#555555">mail </tspan> myx@myx.ru</text>
+		<text x="970%" y="820%"><tspan font-weight="normal" fill="#555555">web </tspan> http://myx.ru/</text>
+		<text x="970%" y="880%"><tspan font-weight="normal" fill="#555555">phone </tspan> +7 903 775 0402<!--,--></text>
+		<!-- <text x="970%" y="940%">+64 220 296 303, +64 210 256 2511</text> -->
+	</g>
+</g>
+
+</svg>

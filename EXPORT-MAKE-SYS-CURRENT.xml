@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="make_sys_current" name="create/synchronize sys-current">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<target name="make_sys_current">
+		<ant useNativeBasedir="true" antfile="../ae3-devel-tools/MAKE-AE3-DISTRO.xml"/>
+
+		<property name="target" location="../acm-cvs/sys-current"/>
+		<mkdir dir="${target}/axiom"/>
+		<copy todir="${target}/axiom/" preservelastmodified="true">
+			<fileset dir="../ae3-share/ae3-distro/common/ae3-axiom" />
+			<fileset dir="defaults/axiom" />
+		</copy>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3api-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 API" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.api/bin" />
+			<fileset dir="../ae3.api.e4/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sdk-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SDK" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sdk/bin" />
+			<fileset dir="../ae3.sdk.e4/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys/bin" />
+			<fileset dir="../ae3.sys.pkg.s4/bin" />
+			<fileset dir="../ae3.sys.pkg.base/bin" />
+			<fileset dir="../ae3.sys.pkg.base.stats/bin" />
+			<fileset dir="../ae3.sys.pkg.base.vfs/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.i3.net-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS IF3 NET" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.i3.net/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.i3.web-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS IF3 WEB" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.i3.web/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.dhtml-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT DHTML" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.dhtml/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.html-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT HTML" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.html/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.json-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT JSON" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.json/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.pdf-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT PDF" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.pdf/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.text-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT TEXT" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.text/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.xls-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT XLS" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.xls/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.l2.tgt.xml-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS LE2 TGT XML" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.l2.tgt.xml/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.s4.lcl.bdbj-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS S4 LCL BDBJ" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.pkg.lib.bdbje/bin" />
+			<fileset dir="../ae3.sys.pkg.s4.lcl.bdbje/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.s4.lcl.db4o-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS S4 LCL DB4O" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.s4.lcl.db4o/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.s4.lcl.jdbc-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS S4 LCL JDBC" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.s4.lcl.jdbc/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.ae3sys.s4.lcl.jodb-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 SYS S4 LCL JODB" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.s4.lcl.jodb/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.acm.base-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 ALIEN API" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../ae3.sys.pkg.i3.email/bin" />
+			<fileset dir="../acm.base/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/axiom/ru.myx.acm.impl-5.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="AE3 ALIEN IMPL" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Sealed" value="false" />
+			</manifest>
+			<fileset dir="../acm.boot/bin" />
+		</jar>
+		
+		<mkdir dir="${target}/boot"/>
+		<jar 
+			destfile="${target}/boot/4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="BOOT - AE3 BOOTSTRAP" />
+				<attribute name="Main-Class" value="ae2core.Main" />
+				<attribute name="Sealed" value="true" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../boot-stage1/bin" />
+		</jar>
+
+		<mkdir dir="${target}/features"/>
+		<!-- TODO: to be removed! /-->
+		<jar 
+			destfile="${target}/features/impl.interface.http-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="HTTP interface" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+		</jar>
+		<jar 
+			destfile="${target}/features/impl.interface.logger-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="LOGGER interface" />
+				<attribute name="Main-Class" value="ru.myx.iface.logger.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../impl-interface-logger/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/impl.interface.ssh-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="SSH interface" />
+				<attribute name="Main-Class" value="ru.myx.iface.ssh.Main" />
+				<attribute name="Require" value="impl.interface.telnet" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../impl-interface-ssh/bin" />
+		</jar>
+		<!-- TODO: to be removed! /-->
+		<jar 
+			destfile="${target}/features/impl.interface.telnet-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="TELNET interface" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+		</jar>
+		<jar 
+			destfile="${target}/features/impl.language.tpl-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="TPL language" />
+				<attribute name="Main-Class" value="ru.myx.renderer.tpl.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../impl-language-tpl/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/impl.shell.commands-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="Additional shell commands" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../impl-shell-commands/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/impl.standard.skinners-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="Standard skins: PLAIN, HIERARCHY, HTML" />
+				<attribute name="Main-Class" value="ru.myx.ae3impl.skinner.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../impl-standard-skinners/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/impl.webdav-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="WEBDAV (Skinner and Server)" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../impl-webdav/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/mod.serialize.drawing-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - mod.serialize.drawing" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../mod-serialize-drawing/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/plug.launcher-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - plug.launcher" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../plug-launcher/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/plug.mail-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - plug.mail" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../plug-mail/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/plug.messaging-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - plug.messaging" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../plug-messaging/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/plug.s2-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - plug.s2" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../plug-s2/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/plug.s3-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - plug.s3" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../plug-s3/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/plug.u1-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - plug.u1" />
+				<attribute name="Main-Class" value="Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../plug-u1/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/srv.acm-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - srv.acm" />
+				<attribute name="Main-Class" value="ru.myx.srv.acm.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../srv-acm/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/srv.dls-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - srv.dls" />
+				<attribute name="Main-Class" value="ru.myx.srv.download.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../srv-dls/bin" />
+		</jar>
+		<jar 
+			destfile="${target}/features/srv.proxy-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="CRAP - srv.proxy" />
+				<attribute name="Main-Class" value="ru.myx.srv.proxy.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../srv-proxy/bin" />
+		</jar>
+
+		<mkdir dir="${target}/modules"/>
+		<jar 
+			destfile="${target}/modules/ae1-4.9.0.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="BOOT - AE3 ALIEN RT3 ENVIRONMENT" />
+				<attribute name="Main-Class" value="ae1core.Main" />
+				<attribute name="Sealed" value="false" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../boot-stage2/bin" />
+		</jar>
+
+		<mkdir dir="${target}/packages"/>
+		<copy todir="${target}/packages/" preservelastmodified="true">
+			<fileset dir="defaults/packages" />
+		</copy>
+
+		<mkdir dir="${target}/resources"/>
+		
+		<!-- ant antfile="../acm-ctrl-simple/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-simple"/>
+		<ant antfile="../acm-ctrl-ie6/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-ie6"/>
+		<ant antfile="../acm-ctrl-temp/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-temp"/ -->
+		
+		<sync todir="${target}/resources/">
+			<preserveintarget>
+				<include name="**/CVS/**"/>
+			</preserveintarget>
+			<fileset dir="defaults/resources" />
+			<fileset dir="../ae3-share/ae3-distro/common/ae3-data/resources" />
+			<fileset dir="../ae3-share/ae3-distro/common/ae3-docs/resources" />
+			<fileset dir="../acm-ctrl-simple/resources" />
+			<fileset dir="../acm-ctrl-ie6/resources" />
+			<fileset dir="../acm-ctrl-temp/resources" />
+			<fileset dir="../acm-ctrl-temp-ie6/resources" />
+			<fileset dir="../acm-skin-acmcms-info/resources" />
+			<fileset dir="../acm.base/resources" />
+			<fileset dir="../impl-standard-skinners/resources" />
+			<fileset dir="../impl-webdav/resources" />
+			<fileset dir="../plug-s3/resources" />
+			<fileset dir="../srv-acm/resources" />
+			<fileset dir="../acm-com.vlapan/resources" />
+		</sync>
+
+		<mkdir dir="${target}/resources/install/acm.cms"/>
+		<copy tofile="${target}/resources/install/acm.cms/install-debian.sh" preservelastmodified="true">
+			<fileset file="../acm-install-debian/acmdeb" />
+		</copy>
+		<copy tofile="${target}/resources/install/acm.cms/install-freebsd.sh" preservelastmodified="true">
+			<fileset file="../acm-install-freebsd/scripts/acmbsd.sh" />
+		</copy>
+
+		<mkdir dir="${target}/settings"/>
+		<sync todir="${target}/settings/">
+			<preserveintarget>
+				<include name="**/CVS/**"/>
+			</preserveintarget>
+			<fileset dir="defaults/settings" />
+			<fileset dir="../ae3-share/ae3-distro/common/ae3-data/settings" />
+			<fileset dir="../ae3-share/ae3-distro/common/ae3-docs/settings" />
+			<fileset dir="../acm-skin-acmcms-info/settings" />
+			<fileset dir="../plug-s3/settings" />
+			<!--
+			<fileset dir="../impl-standard-skinners/settings" />
+			<fileset dir="../impl-webdav/settings" />
+			-->
+		</sync>
+
+		<mkdir dir="${target}/tools"/>
+		<copy todir="${target}/tools/" preservelastmodified="true">
+			<fileset dir="../acm-tools/bin" />
+		</copy>
+		<jar 
+			destfile="${target}/tools/sync-ftp2lfs.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="TOOLS:STANDALONE: sync.ftp2lfs" />
+				<attribute name="Main-Class" value="ru.myx.ae3mod.ftp2lfssync.Main" />
+				<attribute name="Sealed" value="true" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../acm-tools-sync.ftp2lfs/bin" />
+		</jar>
+
+		<mkdir dir="${target}/version"/>
+		<copy file="version" todir="${target}/version" preservelastmodified="true"/>
+
+		<jar 
+			destfile="${target}/boot.jar"
+			compress="true"
+			level="9">
+			<manifest>
+				<attribute name="Title" value="BOOT - CLEAN BOOTSTRAP" />
+				<attribute name="Main-Class" value="boot.Main" />
+				<attribute name="Sealed" value="true" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="../clean-boot/bin" />
+		</jar>
+	</target>
+</project>

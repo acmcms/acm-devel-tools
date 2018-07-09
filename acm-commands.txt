@@ -1,0 +1,4 @@
+acmbsd update live -force && acmbsd restart live && acmbsd update test -force
+
+acmbsd update test -force && acmbsd restart test -fast
+

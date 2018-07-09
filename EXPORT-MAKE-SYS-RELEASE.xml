@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="make_sys_release" name="create/synchronize sys-release">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<target name="make_sys_release">
+		<ant useNativeBasedir="true" antfile="EXPORT-MAKE-SYS-CURRENT.xml"/>
+		<property name="source" location="../acm-cvs/sys-current"/>
+		<property name="target" location="../acm-cvs/sys-release"/>
+		<sync todir="${target}">
+			<preserveintarget>
+				<include name="**/CVS/**"/>
+			</preserveintarget>
+			<fileset dir="${source}" />
+		</sync>
+	</target>
+</project>
