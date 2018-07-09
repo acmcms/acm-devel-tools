@@ -229,7 +229,7 @@
 				<attribute name="Sealed" value="true" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../boot-stage1/bin" />
+			<fileset dir="../acm-boot-2002-stage1/bin" />
 		</jar>
 
 		<mkdir dir="${target}/features"/>
@@ -254,7 +254,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../impl-interface-logger/bin" />
+			<fileset dir="../ae3-plug-iface-logger/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/impl.interface.ssh-4.9.0.jar"
@@ -267,7 +267,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../impl-interface-ssh/bin" />
+			<fileset dir="../ae3-plug-iface-ssh/bin" />
 		</jar>
 		<!-- TODO: to be removed! /-->
 		<jar 
@@ -290,7 +290,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../impl-language-tpl/bin" />
+			<fileset dir="../ae3.sdk-lang.acm-tpl/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/impl.shell.commands-4.9.0.jar"
@@ -326,7 +326,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../impl-webdav/bin" />
+			<fileset dir="../acm-plug-webdav/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/mod.serialize.drawing-4.9.0.jar"
@@ -350,7 +350,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../plug-launcher/bin" />
+			<fileset dir="../acm-plug-launcher/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/plug.mail-4.9.0.jar"
@@ -362,7 +362,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../plug-mail/bin" />
+			<fileset dir="../acm-plug-email/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/plug.messaging-4.9.0.jar"
@@ -374,7 +374,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../plug-messaging/bin" />
+			<fileset dir="../acm-plug-messaging/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/plug.s2-4.9.0.jar"
@@ -386,7 +386,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../plug-s2/bin" />
+			<fileset dir="../acm-plug-s2/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/plug.s3-4.9.0.jar"
@@ -398,7 +398,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../plug-s3/bin" />
+			<fileset dir="../acm-plug-s3/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/plug.u1-4.9.0.jar"
@@ -410,7 +410,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../plug-u1/bin" />
+			<fileset dir="../acm-plug-u1/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/srv.acm-4.9.0.jar"
@@ -422,7 +422,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../srv-acm/bin" />
+			<fileset dir="../acm-srv-acmcms/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/srv.dls-4.9.0.jar"
@@ -434,7 +434,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../srv-dls/bin" />
+			<fileset dir="../acm-srv-download/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/srv.proxy-4.9.0.jar"
@@ -446,7 +446,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../srv-proxy/bin" />
+			<fileset dir="../acm-srv-proxy/bin" />
 		</jar>
 
 		<mkdir dir="${target}/modules"/>
@@ -460,7 +460,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../boot-stage2/bin" />
+			<fileset dir="../acm-boot-2002-stage2/bin" />
 		</jar>
 
 		<mkdir dir="${target}/packages"/>
@@ -470,9 +470,9 @@
 
 		<mkdir dir="${target}/resources"/>
 		
-		<!-- ant antfile="../acm-ctrl-simple/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-simple"/>
-		<ant antfile="../acm-ctrl-ie6/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-ie6"/>
-		<ant antfile="../acm-ctrl-temp/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-temp"/ -->
+		<!-- ant antfile="../acm-skin-ctrl-simple/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-ctrl-simple"/>
+		<ant antfile="../acm-skin-ctrl-ie6/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-skin-ctrl-ie6"/>
+		<ant antfile="../acm-skin-ctrl-temp/EXPORT-PREPARE-SYS-CURRENT.xml" dir="../acm-skin-ctrl-temp"/ -->
 		
 		<sync todir="${target}/resources/">
 			<preserveintarget>
@@ -481,16 +481,16 @@
 			<fileset dir="defaults/resources" />
 			<fileset dir="../ae3-share/ae3-distro/common/ae3-data/resources" />
 			<fileset dir="../ae3-share/ae3-distro/common/ae3-docs/resources" />
-			<fileset dir="../acm-ctrl-simple/resources" />
-			<fileset dir="../acm-ctrl-ie6/resources" />
-			<fileset dir="../acm-ctrl-temp/resources" />
-			<fileset dir="../acm-ctrl-temp-ie6/resources" />
+			<fileset dir="../acm-skin-ctrl-simple/resources" />
+			<fileset dir="../acm-skin-ctrl-ie6/resources" />
+			<fileset dir="../acm-skin-ctrl-temp/resources" />
+			<fileset dir="../acm-skin-ctrl-temp-ie6/resources" />
 			<fileset dir="../acm-skin-acmcms-info/resources" />
 			<fileset dir="../acm.base/resources" />
 			<fileset dir="../impl-standard-skinners/resources" />
-			<fileset dir="../impl-webdav/resources" />
-			<fileset dir="../plug-s3/resources" />
-			<fileset dir="../srv-acm/resources" />
+			<fileset dir="../acm-plug-webdav/resources" />
+			<fileset dir="../acm-plug-s3/resources" />
+			<fileset dir="../acm-srv-acmcms/resources" />
 			<fileset dir="../acm-com.vlapan/resources" />
 		</sync>
 
@@ -511,10 +511,10 @@
 			<fileset dir="../ae3-share/ae3-distro/common/ae3-data/settings" />
 			<fileset dir="../ae3-share/ae3-distro/common/ae3-docs/settings" />
 			<fileset dir="../acm-skin-acmcms-info/settings" />
-			<fileset dir="../plug-s3/settings" />
+			<fileset dir="../acm-plug-s3/settings" />
 			<!--
 			<fileset dir="../impl-standard-skinners/settings" />
-			<fileset dir="../impl-webdav/settings" />
+			<fileset dir="../acm-plug-webdav/settings" />
 			-->
 		</sync>
 
