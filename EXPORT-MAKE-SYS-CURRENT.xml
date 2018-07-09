@@ -548,7 +548,7 @@
 				<attribute name="Sealed" value="true" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../clean-boot/bin" />
+			<fileset dir="../clean-boot/java" />
 		</jar>
 	</target>
 </project>
