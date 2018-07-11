@@ -204,7 +204,7 @@
 				<attribute name="Sealed" value="false" />
 			</manifest>
 			<fileset dir="../ae3.sys.pkg.i3.email/bin" />
-			<fileset dir="../acm-base-api/bin" />
+			<fileset dir="../acm-base-api/java" />
 		</jar>
 		<jar 
 			destfile="${target}/axiom/ru.myx.acm.impl-5.0.jar"
@@ -215,7 +215,7 @@
 				<attribute name="Class-Path" value="." />
 				<attribute name="Sealed" value="false" />
 			</manifest>
-			<fileset dir="../acm-base-sdk/bin" />
+			<fileset dir="../acm-base-sdk/java" />
 		</jar>
 		
 		<mkdir dir="${target}/boot"/>
