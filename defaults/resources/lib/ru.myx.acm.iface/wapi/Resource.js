@@ -1,6 +1,6 @@
 var vfs = require('ae3/vfs');
 
-var VFS_RESOURCE_PATH = "resources/lib/com.ndmsystems.ndls/resource";
+var VFS_RESOURCE_PATH = "resources/lib/ru.myx.acm.iface/resource";
 
 var vfsResource = vfs.UNION.relativeFolder(VFS_RESOURCE_PATH);
 
@@ -19,10 +19,10 @@ function runResource(context){
 		};
 	}
 	if(rest === 'documentation.xml'){
-		const NDLS = require('com.ndmsystems.ndls/NDLS');
+		const ACM = require('ru.myx.acm.iface/ACM');
 		const pass = query.parameters.pass;
 		if(pass){
-			var stats = NDLS.getSettings().docs;
+			var stats = ACM.getSettings().docs;
 			if(pass !== stats.pass){
 				throw context.share.layoutAccessDeniedUnmaskable(query, "Access denied: invalid access key!");
 			}

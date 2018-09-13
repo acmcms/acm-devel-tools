@@ -2,7 +2,7 @@ var title = "ACM::developer/exampleResponse (Example Responses)";
 
 var vfs = require('ae3/vfs');
 
-var VFS_RESOURCE_PATH = "resources/lib/com.ndmsystems.ndls/wapi/developer/example";
+var VFS_RESOURCE_PATH = "resources/lib/ae3.example/wapi/developer/example";
 
 var vfsResource = vfs.UNION.relativeFolder(VFS_RESOURCE_PATH);
 
