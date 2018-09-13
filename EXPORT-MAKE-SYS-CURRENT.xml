@@ -254,7 +254,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../ae3-plug-iface-logger/bin" />
+			<fileset dir="../ae3-plug-iface-logger/java" />
 		</jar>
 		<jar 
 			destfile="${target}/features/impl.interface.ssh-4.9.0.jar"
@@ -267,7 +267,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../ae3-plug-iface-ssh/bin" />
+			<fileset dir="../ae3-plug-iface-ssh/java" />
 		</jar>
 		<!-- TODO: to be removed! /-->
 		<jar 
@@ -290,7 +290,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../ae3.sdk-lang.acm-tpl/bin" />
+			<fileset dir="../ae3.sdk-lang.acm-tpl/java" />
 		</jar>
 		<jar 
 			destfile="${target}/features/impl.shell.commands-4.9.0.jar"
