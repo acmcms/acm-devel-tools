@@ -9,6 +9,7 @@
 		<sync todir="${target}">
 			<preserveintarget>
 				<include name="**/CVS/**"/>
+				<include name=".git/**"/>
 			</preserveintarget>
 			<fileset dir="${source}" />
 		</sync>

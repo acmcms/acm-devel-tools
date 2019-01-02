@@ -6,9 +6,12 @@
 		<ant useNativeBasedir="true" antfile="../ae3-devel-tools/MAKE-AE3-DISTRO.xml"/>
 
 		<property name="target" location="../acm-cvs/sys-current"/>
+		<property name="distro" location="../ae3-share/ae3-distro"/>
+
+			
 		<mkdir dir="${target}/axiom"/>
 		<copy todir="${target}/axiom/" preservelastmodified="true">
-			<fileset dir="../ae3-share/ae3-distro/common/ae3-axiom" />
+			<fileset dir="${distro}/common/ae3-axiom" />
 			<fileset dir="defaults/axiom" />
 		</copy>
 		<jar 
@@ -479,8 +482,8 @@
 				<include name="**/CVS/**"/>
 			</preserveintarget>
 			<fileset dir="defaults/resources" />
-			<fileset dir="../ae3-share/ae3-distro/common/ae3-data/resources" />
-			<fileset dir="../ae3-share/ae3-distro/common/ae3-docs/resources" />
+			<fileset dir="${distro}/common/ae3-data/resources" />
+			<fileset dir="${distro}/common/ae3-docs/resources" />
 			<fileset dir="../acm-skin-ctrl-simple/resources" />
 			<fileset dir="../acm-skin-ctrl-ie6/resources" />
 			<fileset dir="../acm-skin-ctrl-temp/resources" />
@@ -508,8 +511,8 @@
 				<include name="**/CVS/**"/>
 			</preserveintarget>
 			<fileset dir="defaults/settings" />
-			<fileset dir="../ae3-share/ae3-distro/common/ae3-data/settings" />
-			<fileset dir="../ae3-share/ae3-distro/common/ae3-docs/settings" />
+			<fileset dir="${distro}/common/ae3-data/settings" />
+			<fileset dir="${distro}/common/ae3-docs/settings" />
 			<fileset dir="../acm-skin-acmcms-info/settings" />
 			<fileset dir="../acm-plug-s3/settings" />
 			<!--
