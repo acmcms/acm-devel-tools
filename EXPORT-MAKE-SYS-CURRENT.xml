@@ -497,14 +497,6 @@
 			<fileset dir="../acm-com.vlapan/resources" />
 		</sync>
 
-		<mkdir dir="${target}/resources/install/acm.cms"/>
-		<copy tofile="${target}/resources/install/acm.cms/install-debian.sh" preservelastmodified="true">
-			<fileset file="../acm-install-debian/acmdeb" />
-		</copy>
-		<copy tofile="${target}/resources/install/acm.cms/install-freebsd.sh" preservelastmodified="true">
-			<fileset file="../acm-install-freebsd/scripts/acmbsd.sh" />
-		</copy>
-
 		<mkdir dir="${target}/settings"/>
 		<sync todir="${target}/settings/">
 			<preserveintarget>
