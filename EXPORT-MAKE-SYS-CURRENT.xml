@@ -207,7 +207,7 @@
 				<attribute name="Sealed" value="false" />
 			</manifest>
 			<fileset dir="../ae3.sys.pkg.i3.email/bin" />
-			<fileset dir="../acm-base-api/java" />
+			<fileset dir="../acm-base-api/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/axiom/ru.myx.acm.impl-5.0.jar"
@@ -218,7 +218,7 @@
 				<attribute name="Class-Path" value="." />
 				<attribute name="Sealed" value="false" />
 			</manifest>
-			<fileset dir="../acm-base-sdk/java" />
+			<fileset dir="../acm-base-sdk/bin" />
 		</jar>
 		
 		<mkdir dir="${target}/boot"/>
@@ -257,7 +257,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../ae3-plug-iface-logger/java" />
+			<fileset dir="../ae3-plug-iface-logger/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/impl.interface.ssh-4.9.0.jar"
@@ -270,7 +270,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../ae3-plug-iface-ssh/java" />
+			<fileset dir="../ae3-plug-iface-ssh/bin" />
 		</jar>
 		<!-- TODO: to be removed! /-->
 		<jar 
@@ -293,7 +293,7 @@
 				<attribute name="Sealed" value="false" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../ae3.sdk-lang.acm-tpl/java" />
+			<fileset dir="../ae3.sdk-lang.acm-tpl/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/features/impl.shell.commands-4.9.0.jar"
@@ -543,7 +543,7 @@
 				<attribute name="Sealed" value="true" />
 				<attribute name="Class-Path" value="." />
 			</manifest>
-			<fileset dir="../clean-boot/java" />
+			<fileset dir="../clean-boot/bin" />
 		</jar>
 	</target>
 </project>
