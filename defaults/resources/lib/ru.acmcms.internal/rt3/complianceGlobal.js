@@ -460,27 +460,6 @@ function mapToZip(x){
 	return require('ae3.util/Codecs').mapToZip(x);
 }
 
-/**
- * Some obsolete and extra RequestSAPI methods
- */
-const PATCH_REQUEST = {
-	"Path" : {
-		value : function(){
-			return Request.currentRequest.resourceIdentifier.substring(1);
-		}
-	},
-	"Referer" : {
-		value : function(){
-			return (Request.currentRequest.attributes || {})['Referer'];
-		}
-	},
-	"RequestParams" : {
-		value : function(){
-			return Request.currentRequest.parameters || {};
-		}
-	},
-};
-
 
 /**
  * Some obsolete and extra RuntimeSAPI methods
@@ -518,19 +497,13 @@ const PATCH_RUNTIME = {
 
 
 function setupMore(){
-	{
-		import ru.myx.sapi.RuntimeSAPI;
-		var dbi = require('ru.acmcms/dbi');
-		Object.defineProperties(RuntimeSAPI.PROTOTYPE, {
-			'dbExecuteCallback' : { value : dbi.executeCallback },
-			'dbExecuteTransaction' : { value : dbi.executeTransaction },
-		});
-		Object.defineProperties(RuntimeSAPI.PROTOTYPE, PATCH_RUNTIME);
-	}
-	{
-		import ru.myx.sapi.RequestSAPI;
-		Object.defineProperties(RequestSAPI.PROTOTYPE, PATCH_REQUEST);
-	}
+	import ru.myx.sapi.RuntimeSAPI;
+	var dbi = require('ru.acmcms/dbi');
+	Object.defineProperties(RuntimeSAPI.PROTOTYPE, {
+		'dbExecuteCallback' : { value : dbi.executeCallback },
+		'dbExecuteTransaction' : { value : dbi.executeTransaction },
+	});
+	Object.defineProperties(RuntimeSAPI.PROTOTYPE, PATCH_RUNTIME);
 }
 
 
