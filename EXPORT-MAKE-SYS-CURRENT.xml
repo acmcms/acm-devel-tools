@@ -25,6 +25,8 @@
 			</manifest>
 			<fileset dir="../ae3.api/bin" />
 			<fileset dir="../ae3.api.e4/bin" />
+                     <fileset dir="../clean-java.io/bin" />
+                     <fileset dir="../clean-java.util/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/axiom/ru.myx.ae3sdk-5.0.jar"
