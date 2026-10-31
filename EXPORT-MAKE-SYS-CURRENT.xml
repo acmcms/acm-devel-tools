@@ -25,8 +25,9 @@
 			</manifest>
 			<fileset dir="../ae3.api/bin" />
 			<fileset dir="../ae3.api.e4/bin" />
-                     <fileset dir="../clean-java.io/bin" />
-                     <fileset dir="../clean-java.util/bin" />
+			<fileset dir="../clean-java.io/bin" />
+			<fileset dir="../clean-java.util/bin" />
+			<fileset dir="../clean-java.e5/bin" />
 		</jar>
 		<jar 
 			destfile="${target}/axiom/ru.myx.ae3sdk-5.0.jar"
@@ -49,6 +50,7 @@
 				<attribute name="Class-Path" value="." />
 				<attribute name="Sealed" value="false" />
 			</manifest>
+			<fileset dir="../clean-java.crypto/bin" />
 			<fileset dir="../ae3.sys/bin" />
 			<fileset dir="../ae3.sys.pkg.s4/bin" />
 			<fileset dir="../ae3.sys.pkg.base/bin" />
